@@ -67,7 +67,7 @@ class App extends Component {
     this.setState({ imageUrl: this.state.input });
     fetch('https://smart-brain-api-s2v5.onrender.com/imageurl', {
       method: 'post',
-      headers: { 'Content-Type': 'application/json' },
+      // headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         input: this.state.input
       })
@@ -77,7 +77,7 @@ class App extends Component {
         if (response) {
           fetch('https://smart-brain-api-s2v5.onrender.com/image', {
             method: 'put',
-            headers: { 'Content-Type': 'application/json' },
+            // headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({
               id: this.state.user.id
             })
